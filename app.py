@@ -9,16 +9,19 @@ st.title("🚗 Car Price Predictor")
 st.write("Enter the car details to estimate its resale price.")
 st.subheader("📊 Model Performance")
 
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.metric("R² Score", "YOUR_R2")
+    st.metric("R² Score", "0.52")
 
 with col2:
-    st.metric("MAE", "YOUR_MAE")
+    st.metric("Performance", "51.66%")
 
 with col3:
-    st.metric("RMSE", "YOUR_RMSE")
+    st.metric("MAE", "99,090.47")
+
+with col4:
+    st.metric("RMSE", "330,180.04")
 model=load_model(); data=load_data()
 companies=sorted(data["company"].dropna().astype(str).str.strip().unique())
 fuels=sorted(data["fuel_type"].dropna().astype(str).str.strip().unique())
