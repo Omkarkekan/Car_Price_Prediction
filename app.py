@@ -7,6 +7,18 @@ def load_data(): return pd.read_csv(os.path.join(BASE,"car_data.csv"))
 st.set_page_config(page_title="Car Price Predictor",page_icon="🚗")
 st.title("🚗 Car Price Predictor")
 st.write("Enter the car details to estimate its resale price.")
+st.subheader("📊 Model Performance")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("R² Score", "YOUR_R2")
+
+with col2:
+    st.metric("MAE", "YOUR_MAE")
+
+with col3:
+    st.metric("RMSE", "YOUR_RMSE")
 model=load_model(); data=load_data()
 companies=sorted(data["company"].dropna().astype(str).str.strip().unique())
 fuels=sorted(data["fuel_type"].dropna().astype(str).str.strip().unique())
