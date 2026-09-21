@@ -18,10 +18,10 @@ with col2:
     st.metric("Performance", "51.66%")
 
 with col3:
-    st.metric("MAE", "99,090.47")
+    st.metric("MAE", "9906")
 
 with col4:
-    st.metric("RMSE", "330,180.04")
+    st.metric("RMSE", "330")
 model=load_model(); data=load_data()
 companies=sorted(data["company"].dropna().astype(str).str.strip().unique())
 fuels=sorted(data["fuel_type"].dropna().astype(str).str.strip().unique())
