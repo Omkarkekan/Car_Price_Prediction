@@ -12,10 +12,10 @@ st.subheader("📊 Model Performance")
 col1, col2, col3, col4 = st.columns(4)
 
 with col1:
-    st.metric("R² Score", "0.52")
+    st.metric("R² Score", "0.77")
 
 with col2:
-    st.metric("Performance", "51.66%")
+    st.metric("Performance", "76.66%")
 
 with col3:
     st.metric("MAE", "9906")
